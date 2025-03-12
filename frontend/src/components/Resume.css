@@ -1,0 +1,151 @@
+.resume {
+  background-color: var(--darker-color);
+}
+
+.resume-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+}
+
+.resume-download {
+  background-color: var(--dark-color);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  height: fit-content;
+}
+
+.resume-download h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.resume-download p {
+  margin-bottom: 30px;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.download-btn:hover {
+  background-color: rgba(138, 43, 226, 0.8);
+  transform: translateY(-3px);
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+}
+
+.resume-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.timeline-section {
+  position: relative;
+}
+
+.timeline-title {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+  position: relative;
+  display: inline-block;
+}
+
+.timeline-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 5px;
+  height: calc(100% + 40px);
+  width: 1px;
+  background-color: rgba(138, 43, 226, 0.3);
+}
+
+.timeline-item:last-child::before {
+  display: none;
+}
+
+.timeline-content h4 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.timeline-content h5 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+.timeline-date {
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.timeline-content p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 992px) {
+  .resume-content {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-download {
+    margin-bottom: 30px;
+  }
+}
